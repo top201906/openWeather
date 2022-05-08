@@ -1,0 +1,21 @@
+
+config:
+    name: "获取城市当前天气信息"
+
+teststeps:
+-
+    name: $title--获取城市经纬坐标
+    api: api/getGeocoding.yml
+    extract:
+        - lat: content.0.lat
+        - lon: content.0.lon
+    validate:
+        - eq: [headers.Content-Type,"application/json; charset=utf-8"]
+        - eq: [content.0.local_names.zh,$cityName]
+-
+
+    name: $title--获取城市当前天气状况
+    api: api/getCurrentweather.yml
+    validate:
+        - eq: [headers.Content-Type,"application/json; charset=utf-8"]
+        - eq: [content.name,$abbreviation]

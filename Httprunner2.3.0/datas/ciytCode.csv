@@ -1,4 +1,4 @@
-title,cityCode,statusCode
-平谷,756,200
-昌平,785,200
-大兴,826,200
+title,cityName,abbreviation,statusCode
+北京,北京市,Beijing,200
+平谷,平谷区,Pinggu,200
+驻马店,驻马店市,Zhumadian,200

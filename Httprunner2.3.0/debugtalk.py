@@ -29,16 +29,19 @@ def get_cityCode():
 
 
 # 读取CSV文件，并将制定字段以int类型输出
-def csv_weather():
+def csv_cityName():
     with open('/Users/mr/Desktop/Git_httprunner/Httprunner2.3.0/datas/ciytCode.csv',mode='r',encoding='utf-8') as readers:
         csv_readers = csv.DictReader(readers)
         weather_date = []
         for row in csv_readers:
             weather_date.append(row)
-        compressed = [(x['title'], x['cityCode'], int(x['statusCode'])) for x in weather_date]
+        compressed = [(x['title'], x['cityName'], x['abbreviation'], int(x['statusCode'])) for x in weather_date]
         return compressed
 
-# print(csv_weather())
+print(csv_cityName())
+
+
+
 #MD5加密
 def md5_key(value):
    if isinstance(value, str) == True:
@@ -68,8 +71,7 @@ def getWeather():
     elif theCityCode == '826':
         return {"data":{"cityname":"大兴","cityid":theCityCode,"status":"小雨","centigrade":"9℃/18℃","wind":"北风小于3级"}}
 
-#zhaoheli VS yanxian15011396995===========34621111111111111111111
 
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()

@@ -1,11 +1,11 @@
 
 config:
-    name: "demo testsuite"
+    name: "获取城市当前天气信息"
 
 testcases:
 -
     name: "接口测试套件"
-    testcase: testcases/demo_testcase.yml
+    testcase: testcases/getCurrentweather.yml
     parameters:
         #方法一
 #        - title-cityCode-statusCode:
@@ -15,4 +15,4 @@ testcases:
         #方法二
 #        - title-cityCode-statusCode: ${P(datas/ciytCode.csv)}
         #方法三
-    - title-cityCode-statusCode: ${csv_weather()}
+    - title-cityName-abbreviation-statusCode: ${csv_cityName()}
