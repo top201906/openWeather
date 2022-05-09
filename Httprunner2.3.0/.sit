@@ -1,3 +1,2 @@
-USERNAME=leolee
-PASSWORD=123456
-HTTP=http://ws.webxml.com.cn
+HTTP=http://api.openweathermap.org
+API_key=12b2817fbec86915a6e9b4dbbd3d9036

@@ -7,12 +7,12 @@ testcases:
     name: "接口测试套件"
     testcase: testcases/getCurrentweather.yml
     parameters:
-        #方法一
-#        - title-cityCode-statusCode:
-#            - ["平谷","756",200]
-#            - ["昌平","785",200]
-#            - ["大兴","826",200]
+#        方法一
+#        - title-cityName-abbreviation-statusCode:
+#              - ["北京","北京市","Beijing",200]
+#              - ["天津","天津市","Tianjin",200]
+
         #方法二
-#        - title-cityCode-statusCode: ${P(datas/ciytCode.csv)}
+        - title-cityName-abbreviation-statusCode: ${get_cityName()}
         #方法三
-    - title-cityName-abbreviation-statusCode: ${csv_cityName()}
+#        - title-cityName-abbreviation-statusCode: ${csv_cityName()}
