@@ -12,6 +12,8 @@ teststeps:
     validate:
         - contains: [headers.Content-Type,"application/json"]
         - contains: [content.0.local_names.zh,$cityName]
+#    teardown_hooks:
+#        - ${sleep_N_secs($response, 3)}
 -
 
     name: $title--获取城市当前天气状况

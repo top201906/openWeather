@@ -30,7 +30,7 @@ def get_cityName():
 
 
 
-# 读取CSV文件，并将制定字段以int类型输出
+# 读取CSV文件，并将指定字段以int类型输出
 def csv_cityName():
     with open('/Users/mr/Desktop/Git_httprunner/Httprunner2.3.0/datas/ciytName.csv',mode='r',encoding='utf-8') as readers:
         csv_readers = csv.DictReader(readers)
@@ -134,3 +134,14 @@ def get_Tianqi():
 
 if __name__ == '__main__':
     app.run()
+
+
+
+def sleep_N_secs(response, n_secs):
+    # 休眠
+    if response.status_code == 200:
+        time.sleep(n_secs)
+        print("等待" + n_secs + "秒")
+    else:
+        time.sleep(0.5)
+
