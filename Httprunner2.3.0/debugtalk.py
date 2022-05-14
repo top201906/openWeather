@@ -141,7 +141,6 @@ def sleep_N_secs(response, n_secs):
     # 休眠
     if response.status_code == 200:
         time.sleep(n_secs)
-        print("等待" + n_secs + "秒")
     else:
         time.sleep(0.5)
 
