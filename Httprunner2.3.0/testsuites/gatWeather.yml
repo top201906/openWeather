@@ -10,9 +10,9 @@ testcases:
 #        方法一
 #        - title-cityName-abbreviation-statusCode:
 #              - ["北京","北京市","Beijing",200]
-#              - ["天津","天津市","Tianjin",200]
+#              - ["纽约","纽约","New York",200]
 
         #方法二
-        - title-cityName-abbreviation-statusCode: ${get_cityName()}
+#        - title-cityName-abbreviation-statusCode: ${get_cityName()}
         #方法三
-#        - title-cityName-abbreviation-statusCode: ${csv_cityName()}
+        - title-cityName-abbreviation-statusCode: ${csv_cityName()}
