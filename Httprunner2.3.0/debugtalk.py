@@ -28,7 +28,7 @@ def get_cityName():
 
 # print(get_cityName())
 
-
+"""mock启动了"""
 
 # 读取CSV文件，并将指定字段以int类型输出
 def csv_cityName():
@@ -40,7 +40,7 @@ def csv_cityName():
     #     compressed = [(x['title'], x['cityName'], x['abbreviation'], int(x['statusCode'])) for x in weather_date]
     #     return compressed
 
-    with open('/Users/mr/Desktop/Git_httprunner/Httprunner2.3.0/datas/ciytName.csv',mode='r',encoding='utf-8') as readers:
+    with open('/Users/mr/Desktop/Git_httprunner/Httprunner2.3.0/datas/ciytName.csv', mode='r', encoding='utf-8') as readers:
         csv_datas = csv.DictReader(readers)
         weather_date = []
         for data in csv_datas:
@@ -139,10 +139,6 @@ def get_Tianqi():
     elif city_Lat == "40.7127281" and city_Lon == "-74.0060152":
         return {"coord":{"lon":-74.006,"lat":40.7127},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":281.43,"feels_like":277.7,"temp_min":279.68,"temp_max":282.59,"pressure":1021,"humidity":39},"visibility":10000,"wind":{"speed":7.6,"deg":25,"gust":12.96},"clouds":{"all":0},"dt":1652085471,"sys":{"type":2,"id":2039034,"country":"US","sunrise":1652089507,"sunset":1652140790},"timezone":-14400,"id":5128581,"name":"New York","cod":200}
 
-if __name__ == '__main__':
-    app.run()
-
-
 
 def sleep_N_secs(response, n_secs):
     # 休眠
@@ -150,4 +146,5 @@ def sleep_N_secs(response, n_secs):
         time.sleep(n_secs)
     else:
         time.sleep(0.5)
+
 
