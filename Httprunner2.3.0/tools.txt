@@ -1,0 +1,3 @@
+httprunner==2.3.0
+Flask==1.1.4
+django-jsonresponse==1.1.5
