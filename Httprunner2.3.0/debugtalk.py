@@ -11,10 +11,6 @@ from json_response import JsonResponse
 from flask_cors import CORS
 
 
-def sleep(n_secs):
-    time.sleep(n_secs)
-
-
 def get_cityName():
     citycodes = [
         {"title":"北京","cityName":"北京市","abbreviation":"Beijing","statusCode":200},
