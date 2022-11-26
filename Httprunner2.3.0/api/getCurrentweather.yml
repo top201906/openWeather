@@ -1,0 +1,17 @@
+
+name: "根据经纬度坐标获取城市当前天气状况"
+variables:
+    lon: "116.3912757"
+    lat: "39.906217"
+base_url: ${ENV(HTTP)}
+request:
+    url: /data/2.5/weather
+    method: GET
+    headers:
+        Content-Type: "application/json; charset=utf-8"
+    params:
+        lat: $lat
+        lon: $lon
+        appid: ${ENV(API_key)}
+validate:
+    - eq: [status_code, 200]

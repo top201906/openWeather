@@ -1,0 +1,16 @@
+
+name: "获取城市经纬度坐标"
+variables:
+    cityName: "纽约"
+base_url: ${ENV(HTTP)}
+request:
+    url: /geo/1.0/direct
+    method: GET
+    headers:
+        Content-Type: "application/json; charset=utf-8"
+    params:
+        q: $cityName
+        limit: "5"
+        appid: ${ENV(API_key)}
+validate:
+    - eq: [status_code, 200]

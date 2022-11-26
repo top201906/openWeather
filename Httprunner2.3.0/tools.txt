@@ -1,0 +1,4 @@
+httprunner==2.3.0
+Flask==1.1.4
+django-json-response==1.1.5
+flask_cors==3.0.1
