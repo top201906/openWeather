@@ -34,7 +34,7 @@ def csv_cityName():
     #     compressed = [(x['title'], x['cityName'], x['abbreviation'], int(x['statusCode'])) for x in weather_date]
     #     return compressed
 
-    with open(r'datas/ciytName.csv', mode='r', encoding='utf-8') as readers:
+    with open(r'Httprunner2.3.0/datas/ciytName.csv', mode='r', encoding='utf-8') as readers:
         csv_datas = csv.DictReader(readers)
         weather_date = []
         for data in csv_datas:
